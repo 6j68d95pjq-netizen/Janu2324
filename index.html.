@@ -5,61 +5,91 @@
   <title>For Janu 💖</title>
   <style>
     body {
-      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
       font-family: 'Segoe UI', sans-serif;
       text-align: center;
-      padding-top: 60px;
-      color: #fff;
+      padding-top: 80px;
+      color: white;
     }
-    h1 { font-size: 2.2em; }
-    p { font-size: 1.2em; margin: 20px; }
+    h1 {
+      font-size: 2.5em;
+    }
+    p {
+      font-size: 1.3em;
+      margin: 25px;
+    }
     button {
-      padding: 15px 30px;
+      padding: 15px 35px;
       font-size: 18px;
       border: none;
       border-radius: 30px;
       margin: 15px;
       cursor: pointer;
     }
-    .yes { background: #ff4d6d; color: white; }
-    .no { background: white; color: #ff4d6d; }
+    .yes {
+      background: #00ffcc;
+      color: #000;
+    }
+    .no {
+      background: white;
+      color: #ff4d6d;
+    }
   </style>
 </head>
+
 <body>
 
-<h1 id="title">Hey Janu 💕</h1>
-<p id="text">Boo… will you be my Valentine? 💝</p>
+  <h1>Hey Boo 💕</h1>
+  <p>
+    Janu…  
+    Boo… Bookatha… Boobika…  
+    Bangaram… Chellom… Thanga Kunju 🥹  
+  </p>
 
-<button class="yes" onclick="yes()">YES 😍</button>
-<button class="no" onclick="no()">NO 🙈</button>
+  <p>
+    I tried 7 times to not lose you…  
+    I’ll try one more time with my whole heart ❤️  
+  </p>
 
-<script>
-let count = 0;
-const messages = [
-  "Januu 🥺 don’t say nooo",
-  "Boo 😘 my heart is shaking",
-  "Bookatha 💓 I’ll wait forever",
-  "Boobika 💕 say yes please",
-  "Bangaram 💎 you are precious",
-  "Chellom 😭 I’m begging",
-  "Thanga Kunju 🥹 last chance"
-];
+  <h2>Will you be my Valentine? 💘</h2>
 
-function no() {
-  if (count < messages.length) {
-    document.getElementById("text").innerText = messages[count];
-    count++;
-  } else {
-    document.getElementById("text").innerText =
-      "Hey Boo 💖 you are my everything. My safe place, my happiness, my forever. Will you be my Valentine? 🌹";
-  }
-}
+  <button class="yes" onclick="yesClicked()">YES 💖</button>
+  <button class="no" onclick="noClicked()">NO 🙈</button>
 
-function yes() {
-  document.body.innerHTML =
-    "<h1>YAYYY 😍💖</h1><p>Janu said YES 💍✨<br>2324 forever ♾️</p>";
-}
-</script>
+  <p id="msg"></p>
+
+  <script>
+    let count = 0;
+    const texts = [
+      "Ayyo Janu… don’t say no 😭",
+      "Boo please… my heart is shaking 💔",
+      "Bookatha… I’ll wait forever 🥹",
+      "Boobika… one chance da 😌",
+      "Bangaram… I choose only you 💖",
+      "Chellom… life feels empty without you 😔",
+      "Thanga Kunju… last time asking 😭"
+    ];
+
+    function noClicked() {
+      document.getElementById("msg").innerText = texts[count];
+      count++;
+      if (count >= texts.length) {
+        count = texts.length - 1;
+      }
+    }
+
+    function yesClicked() {
+      document.body.innerHTML = `
+        <h1>😭💖 YESSSS 💖😭</h1>
+        <p>
+          Hey Boo…  
+          You are my calm, my chaos, my forever.  
+          My today, my tomorrow, my always.  
+        </p>
+        <h2>Happy Valentine’s Day, Janu 💍❤️</h2>
+      `;
+    }
+  </script>
 
 </body>
 </html>
