@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For Janu 💖</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding-top: 60px;
+      color: #fff;
+    }
+    h1 { font-size: 2.2em; }
+    p { font-size: 1.2em; margin: 20px; }
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 30px;
+      margin: 15px;
+      cursor: pointer;
+    }
+    .yes { background: #ff4d6d; color: white; }
+    .no { background: white; color: #ff4d6d; }
+  </style>
+</head>
+<body>
+
+<h1 id="title">Hey Janu 💕</h1>
+<p id="text">Boo… will you be my Valentine? 💝</p>
+
+<button class="yes" onclick="yes()">YES 😍</button>
+<button class="no" onclick="no()">NO 🙈</button>
+
+<script>
+let count = 0;
+const messages = [
+  "Januu 🥺 don’t say nooo",
+  "Boo 😘 my heart is shaking",
+  "Bookatha 💓 I’ll wait forever",
+  "Boobika 💕 say yes please",
+  "Bangaram 💎 you are precious",
+  "Chellom 😭 I’m begging",
+  "Thanga Kunju 🥹 last chance"
+];
+
+function no() {
+  if (count < messages.length) {
+    document.getElementById("text").innerText = messages[count];
+    count++;
+  } else {
+    document.getElementById("text").innerText =
+      "Hey Boo 💖 you are my everything. My safe place, my happiness, my forever. Will you be my Valentine? 🌹";
+  }
+}
+
+function yes() {
+  document.body.innerHTML =
+    "<h1>YAYYY 😍💖</h1><p>Janu said YES 💍✨<br>2324 forever ♾️</p>";
+}
+</script>
+
+</body>
+</html>
